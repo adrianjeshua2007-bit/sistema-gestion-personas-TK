@@ -1,0 +1,17 @@
+﻿version: '3.8'
+
+services:
+  sistema-gestion:
+    build: .
+    container_name: sistema-gestion-personas
+    environment:
+      - DISPLAY=host.docker.internal:0
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - .:/app  # Para el código
+      - ./data:/tmp  # ✅ NUEVO: Montar carpeta data como /tmp
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    working_dir: /app
+    stdin_open: true
+    tty: true
+    network_mode: host

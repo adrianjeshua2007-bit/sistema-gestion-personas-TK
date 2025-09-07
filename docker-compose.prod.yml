@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  sistema-gestion:
+    build: .
+    container_name: sistema-gestion-app
+    image: sistema-gestion-personas:latest
+    environment:
+      - DISPLAY=host.docker.internal:0
+      - QT_X11_NO_MITSHM=1
+    volumes:
+      - sistema-gestion-data:/app/data
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    networks:
+      - sistema-gestion-network
+    restart: unless-stopped
+
+volumes:
+  sistema-gestion-data:
+    name: sistema-gestion-db-data
+
+networks:
+  sistema-gestion-network:
+    name: sistema-gestion-net

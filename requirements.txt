@@ -1,0 +1,2 @@
+﻿# Este archivo puede estar vacío o contener dependencias adicionales
+# Tkinter viene incluido en Python
