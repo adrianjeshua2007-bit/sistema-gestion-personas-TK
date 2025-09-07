@@ -1,0 +1,17 @@
+# Sistema de Gestión de Personas
+
+Sistema de gestión de personas con interfaz gráfica desarrollado en Python.
+
+## Características
+- Login seguro
+- CRUD completo
+- Búsqueda y filtrado
+- Base de datos SQLite
+
+## Credenciales
+- Usuario: `adrianjeshua`
+- Contraseña: `07062007`
+
+## Instalación
+```bash
+python sistema-gestion-personas.py
